@@ -1,2 +1,49 @@
+/* // primary colors
+$cyan: hsl(179, 62%, 43%);
+$yellow: hsl(71, 73%, 54%);
+
+// secondary
+$gray: hsl(204, 43%, 93%);
+$grayBlue: hsl(218, 22%, 67%); */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: 'Karla', sans-serif;
+  margin: 50px; }
+
+.hero-block {
+  background-color: white;
+  padding-bottom: 30px; }
+
+.hero-block h1 {
+  color: #2ab2af;
+  font-weight: 700; }
+
+.hero-block h2 {
+  color: #c0df34;
+  font-weight: 700; }
+
+.hero-block p {
+  color: #98a6bd;
+  font-size: 16px; }
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr); }
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+.item p {
+  margin: 0 0 5px 0; }
