@@ -15,14 +15,32 @@ html {
 }
 
 body {
-    margin: 0 auto;
     font-family: 'Karla', sans-serif;
-    margin: 50px;
+    font-size: 16px;
+    background-color: var(--gray);
+}
+
+.space {
+    padding-top: 100px;
+}
+
+.main {
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p {
+    line-height: 22px;
 }
 
 .hero-block {
     background-color: white;
-    padding-bottom: 30px;
+    padding: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: var(--grayBlue);
 }
 
 .hero-block h1 {
@@ -30,7 +48,7 @@ body {
     font-weight: 700;
 }
 
-.hero-block h2 {
+.hero-block h3 {
     color: var(--yellow);
     font-weight: 700;
 }
@@ -41,62 +59,58 @@ body {
 }
 
 .container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.item {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 16px;
-    background-color: var(--yellow);
-}
-  
-.item p {
-    margin: 0 0 5px 0;
+    display: flex;
 }
 
 .item1 {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: 30px;
     background-color: var(--cyan);
-    padding: 50px;
-    font-weight: 400;
+    border-bottom-left-radius: 10px;
+    color: white;
 }
 
-.item1 span {
-    font-size: 28px;
+.one {
+    color: hsla(0, 0%, 100%, 0.5);
 }
 
-.item1 h3 {
-    font-weight: 400;
-    font-size: 12px;
+.two {
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+strong {
+    font-size: 35px;
+    padding-right: 10px;
+    line-height: 1em;
+    color: white;
 }
 
 button {
-    width: 100%;
-    margin-top: 20px;
-    height: 45px;
-    border-radius: 5px;
     background-color: var(--yellow);
     color: white;
+    padding: 10px;
+    width: 75%;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     font-family: 'Karla', sans-serif;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .item2 {
+    width: 50%;
+    float: left;
+    display: block;
+    padding: 30px;
     background-color: var(--cyan);
-    padding: 50px;
-    font-weight: 400;
+    border-bottom-right-radius: 10px;
+    color: white;
 }
 
 .item2 ul {
     padding: 0;
+    color: hsla(0, 0%, 100%, 0.5);
 }
 
 .item2 li {
@@ -104,5 +118,40 @@ button {
     list-style: none;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 
+/* responsive changes */
+
+@media only screen and (max-width: 500px) {
+    .main {
+        width: 90%;
+    }
+
+    .container {
+        display: inline;
+    }
+
+    .item1 {
+        float: none;
+        width: 100%;
+        border-bottom-left-radius: 0px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .item2 {
+        float: none;
+        width: 100%;
+        border-bottom-left-radius: 0px;
+    }
+}
